@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <script src="https://unpkg.com/unlazy@0.11.3/dist/unlazy.with-hashing.iife.js" defer init></script>
+    <script type="text/javascript">
+        window.tailwind.config = {
+            darkMode: ['class'],
+            theme: {
+                extend: {
+                    colors: {
+                        border: 'hsl(var(--border))',
+                        input: 'hsl(var(--input))',
+                        ring: 'hsl(var(--ring))',
+                        background: 'hsl(var(--background))',
+                        foreground: 'hsl(var(--foreground))',
+                        primary: {
+                            DEFAULT: 'hsl(var(--primary))',
+                            foreground: 'hsl(var(--primary-foreground))'
+                        },
+                        secondary: {
+                            DEFAULT: 'hsl(var(--secondary))',
+                            foreground: 'hsl(var(--secondary-foreground))'
+                        },
+                        destructive: {
+                            DEFAULT: 'hsl(var(--destructive))',
+                            foreground: 'hsl(var(--destructive-foreground))'
+                        },
+                        muted: {
+                            DEFAULT: 'hsl(var(--muted))',
+                            foreground: 'hsl(var(--muted-foreground))'
+                        },
+                        accent: {
+                            DEFAULT: 'hsl(var(--accent))',
+                            foreground: 'hsl(var(--accent-foreground))'
+                        },
+                        popover: {
+                            DEFAULT: 'hsl(var(--popover))',
+                            foreground: 'hsl(var(--popover-foreground))'
+                        },
+                        card: {
+                            DEFAULT: 'hsl(var(--card))',
+                            foreground: 'hsl(var(--card-foreground))'
+                        },
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer base {
+            :root {
+                --background: 0 0% 100%;
+                --foreground: 240 10% 3.9%;
+                --card: 0 0% 100%;
+                --card-foreground: 240 10% 3.9%;
+                --popover: 0 0% 100%;
+                --popover-foreground: 240 10% 3.9%;
+                --primary: 240 5.9% 10%;
+                --primary-foreground: 0 0% 98%;
+                --secondary: 240 4.8% 95.9%;
+                --secondary-foreground: 240 5.9% 10%;
+                --muted: 240 4.8% 95.9%;
+                --muted-foreground: 240 3.8% 46.1%;
+                --accent: 240 4.8% 95.9%;
+                --accent-foreground: 240 5.9% 10%;
+                --destructive: 0 84.2% 60.2%;
+                --destructive-foreground: 0 0% 98%;
+                --border: 240 5.9% 90%;
+                --input: 240 5.9% 90%;
+                --ring: 240 5.9% 10%;
+                --radius: 0.5rem;
+            }
+            .dark {
+                --background: 240 10% 3.9%;
+                --foreground: 0 0% 98%;
+                --card: 240 10% 3.9%;
+                --card-foreground: 0 0% 98%;
+                --popover: 240 10% 3.9%;
+                --popover-foreground: 0 0% 98%;
+                --primary: 0 0% 98%;
+                --primary-foreground: 240 5.9% 10%;
+                --secondary: 240 3.7% 15.9%;
+                --secondary-foreground: 0 0% 98%;
+                --muted: 240 3.7% 15.9%;
+                --muted-foreground: 240 5% 64.9%;
+                --accent: ...
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-background text-foreground">
+    <header class="flex justify-between items-center p-6">
+        <h1 class="text-3xl font-bold">Zager_be </h1>
+        <nav>
+            <ul class="flex space-x-4">
+                <li><a href="#home" class="text-muted hover:text-muted-foreground">Home</a></li>
+                <li><a href="#services" class="text-muted hover:text-muted-foreground">Services</a></li>
+                <li><a href="#about" class="text-muted hover:text-muted-foreground">About</a></li>
+                <li><a href="#skills" class="text-muted hover:text-muted-foreground">Skills</a></li>
+                <li><a href="#portfolio" class="text-muted hover:text-muted-foreground">Portfolio</a></li>
+                <li><a href="#contact" class="text-muted hover:text-muted-foreground">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+
+    <main class="flex flex-col items-center py-16">
+        <section id="home" class="text-center">
+            <h2 class="text-4xl font-bold">Hello, I'm a Front end Developer</h2>
+            <p class="mt-4 text-muted-foreground">Fond of creating web application designs and bringing them to life using code & developing mobile designs.</p>
+            <button class="mt-6 bg-primary text-primary-foreground px-4 py-2 rounded">Create Journey</button>
+        </section>
+
+        <section id="services" class="mt-16">
+            <h3 class="text-2xl font-semibold">Services</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+              <!-- Service Cards -->
+              <!-- Repeat this block for more services -->
+              <div class="bg-card p-4 rounded shadow">
+                  <img aria-hidden="true" alt="Git Version Control" src="https://openui.fly.dev/openui/24x24.svg?text=📚" />
+                  <h4 class="font-bold">Git Version Control</h4>
+                  <p class="text-muted-foreground">Version control for tracking changes in your code.</p>
+              </div> 
+              <div class="bg-card p-4 rounded shadow">
+                <img aria-hidden="true" alt="App Design" src="https://openui.fly.dev/openui/24x24.svg?text=📱" />
+                <h4 class="font-bold">App Design</h4>
+                <p class="text-muted-foreground">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+              </div>
+              <div class="bg-card p-4 rounded shadow">
+                <img aria-hidden="true" alt="Back-end Development" src="https://openui.fly.dev/openui/24x24.svg?text=🔧" />
+                <h4 class="font-bold">front-end Development</h4>
+                <p class="text-muted-foreground">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+              </div>
+              <div class="bg-card p-4 rounded shadow">
+                <img aria-hidden="true" alt="Web Development" src="https://openui.fly.dev/openui/24x24.svg?text=🌐" />
+                <h4 class="font-bold">Web Development</h4>
+                <p class="text-muted-foreground">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+              </div>
+              <!-- Add more service cards as needed -->
+            </div>
+        </section>
+
+        <section id="about" class="mt-16 text-center">
+          <h3 class="text-2xl font-semibold">About Me</h3>
+          <p class="mt-4 text-muted-foreground">I am passionate about developing user-friendly applications.</p>
+        </section>
+        
+
+
+        <section id="skills" class="mt-16 text-center">
+          <h3 class="text-2xl font-semibold">Skills</h3>
+          <p class="mt-4 text-muted-foreground">Digital,Video editing, Front-end development...</p>
+        </section>
+        <img src="digital.jpg" alt="name"width="500">
+        <img src="video.jpg" alt="n" width="500">
+        <img src="cir.jpg" alt="n" width="500">
+        <section id="portfolio" class="mt-16 text-center">
+          <h3 class="text-2xl font-semibold">Portfolio</h3>
+          <!-- Portfolio Items -->
+          <!-- Add portfolio items here -->
+        </section>
+
+        <section id="contact" class="mt-16">
+            <h3 class="text-center text-xl font-semibold">Connect with me</h3>
+            <form onsubmit="handleSubmit(event)" class="mt-4 max-w-md mx-auto">
+              <input type="email" placeholder="Email" required 
+                     class="border border-border rounded p-2 w-full mb-4"/>
+              <textarea placeholder="Message" required 
+                        class="border border-border rounded p-2 w-full mb-4"></textarea>
+              <button type='submit' 
+                      class='bg-primary text-primary-foreground px-4 py-2 rounded'>Stay Connected</button>
+            </form>
+        </section>
+
+        <footer class='mt-auto py-6'>
+          <p>&copy;2024 Zager_be - All Rights Reserved.</p>
+        </footer>
+
+    </main>
+
+    <!-- JavaScript for form handling -->
+    <script type='text/javascript'>
+      function handleSubmit(event) {
+          event.preventDefault(); // Prevent the default form submission
+          alert("Thank you for your message!"); // Show a thank you message
+          // You can add further logic to handle the form data here (e.g., send it to a server)
+      }
+    </script>
+
+</body>
+</html>
